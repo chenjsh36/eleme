@@ -1,0 +1,407 @@
+// topbar 
+@tb_col: #999;
+// topbar-content
+@tbc_col: #1e89e0;
+// topbar-content-item hover 
+@tbci_col:#006bc7;
+@tbi_hover_col:#006bc7;
+// topbarcontent
+@tbc_w : 1178px;
+// sidebar
+@sb_w : 35px;
+// topbar-item
+@tbi_w : 104px;
+// tobar-item
+@tbi_h : 60px;
+//topitem-right-list
+@trl_w : 500px;
+@tr_w : 80px;
+
+@font-face {
+	font-family:"icomoon";
+	src:url('fonts/icomoon.eot?-wrhawm');
+	src:url('fonts/icomoon.eot?#iefix-wrhawm') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-wrhawm') format('truetype'),
+		url('fonts/icomoon.woff?-wrhawm') format('woff'),
+		url('fonts/icomoon.svg?-wrhawm#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@body_col: #f7f7f7;
+body {
+	margin : 0;
+	padding : 0;
+	font : 300 1em/1.5 "PingFang SC","Lantinghei SC","Helvetica Neue","Microsoft Yahei","Hiragino Sans GB","Microsoft Sans Serif","WenQuanYi Micro Hei","sans";	
+	background-color: @body_col;
+}
+
+
+#footer {
+	display : none;
+}
+
+#topbar {
+	height: @tbi_h;
+	background-color : @tbc_col;
+
+	#topbar-content {
+		width: @tbc_w;
+		margin: 0 auto;
+		padding-right:@sb_w;
+		height: @tbi_h;
+		background-color : @tbc_col;
+		
+		.topitem {
+			float:left;
+			line-height: @tbi_h;
+			height: @tbi_h;
+			width: @tbi_w;
+
+			cursor: pointer;
+			background-color : @tbc_col;
+			color : white;
+			text-align: center;
+			vertical-align:middle;
+
+			a {
+				text-decoration: none;
+				color : white;
+				font-weight: bolder;
+				font-size: 16px;
+			}
+			&#tap-father {
+				position: relative;
+			}
+			.tap {
+				position: absolute;
+				top :5px;
+				right:3px;
+
+				font-size: 8px;
+				width: 34px;
+				height: 15px;
+				line-height: 15px;
+
+				background-color : red;
+			}
+		}
+		.topitem:hover {
+			background-color : @tbi_hover_col;
+		}
+		.topitem-right-list {
+			float:right;
+			width: @trl_w;
+			.topitem-right {
+				float: left;
+				height: @tbi_h;
+				line-height: @tbi_h;
+				width: @tr_w;
+				
+				text-align: center;
+				vertical-align: middle;
+				
+				color: #eee;
+				cursor: pointer;
+			}
+			.topitem-right:hover {
+				color:white;
+			}
+			#logReg {
+				float: right;
+				a {
+					color:white
+				}
+			}
+		}
+	}
+}
+
+@sidebar_col : #504d53;
+@side_part_col:#504d53;
+@sid_content_col:#e6e6e6;
+@icon_hover_col : #26a2ff;
+
+@sidebar_w : 330px;
+@side_part_w : 35px;
+@side_content_w: 295px;
+
+#sidebar {
+	position : fixed;
+	top : 0;
+	bottom : 0;
+	right: -295px;
+	width: @sidebar_w;
+
+	background-color : @sidebar_col;
+	
+	#side-part {
+		width: @side_part_w;
+		height:100%;
+		text-align: center;
+
+		a {
+			text-decoration : none;
+			color : white;
+		}
+		[class^="icon-"], [class*=" icon-"] {
+			margin: 5px 0;
+			display: block;
+			line-height: 35px;
+			&:hover {
+				background-color: @icon_hover_col;
+			}
+		}
+		#side-part-middle {
+			text-align: center;
+			vertical-align: middle;
+			top:50%;
+			position: absolute;
+			margin-top: -200px;
+			width: @side_part_w;
+
+			.divide {
+				height: 0;
+				border-bottom: 1px solid yellow;
+				margin: 0 8px;
+			}
+			.icon-file-text:before {
+				content: "\e603";
+			}
+			.icon-gift {
+				position: relative;
+				display: block;
+				
+				line-height: 18px;
+				font-size: 16px;
+				font-weight: 700;
+				
+				padding: 0 8px;
+				margin-top: 3px;
+				margin-bottom: 3px;
+				&:before {
+					content: "\e60c";				
+				}
+			}
+			.icon-heart:before {
+			    content: "\e60e";
+			}
+			.icon-history:before {
+			    content: "\e604";
+			}
+		}
+		#side-part-bottom {
+			position: absolute;
+			bottom: 10px;
+			width: 35px;
+
+			.icon-user:before {
+			    content: "\e607";
+			}
+			.icon-trophy:before {
+			    content: "\e60b";
+			}
+			.icon-cogs:before {
+			    content: "\e60a";
+			}
+			.icon-home:before {
+			    content: "\e600";
+			}
+		}
+	}
+
+	#side-content {
+		background-color: @sid_content_col;
+		width: @side_content_w;
+		margin-left: @side_part_w;
+		width: 295px;
+		margin-left: 35px;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+@cc_w : 1178px;
+@input_h:24px;
+@search_h:32px;
+@input_col : #ccc;
+@cc_col: #f7f7f7;
+
+#content {
+	#content-container {
+		display: block;
+		width: @cc_w;
+		margin: 0 auto;
+		padding-right: @side_part_w;
+		background-color: @cc_col;
+		.search {
+			float : right;
+			border : 1px solid @input_col;
+			margin: 10px 0;
+			// width: 220px;
+			height: @search_h;
+			line-height: @search_h;
+			input {
+				border: 0;
+				padding: 0 4px;
+				height: @input_h;
+				line-height: @input_h;
+				margin: 4px 0;
+				float: left;
+			}
+			input:focus {
+				outline: 0;
+				width: 250px;
+  				transition: width .3s ease-in-out;
+			}
+			.icon-tongue {
+				display: inline-block;
+				height: 28px;
+				float: right;
+				line-height: 28px;
+				margin: 2px 0;
+				padding: 0 12px;
+				border-left: 1px solid #ccc;
+			}
+			.icon-tongue:before {
+				content: "\e60f";
+			}	
+		}
+		.address {
+			font-size: 8px;
+			height : 54px;
+			line-height : 54px;
+			span {
+				color : #ccc;
+				margin-right : 10px;
+				height: 54px;
+				line-height: 54px;
+			}
+			strong {
+				display: inline-block;
+				color : #333;
+				width : 132px;
+				margin-right: 10px;
+				height:54px;
+				line-height: 54px;
+				text-overflow : ellipsis;
+				overflow: hidden;
+				vertical-align: top;
+				cursor: pointer;
+
+				&:hover {
+					color : #0089dc;
+				}
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+		.pic-show {
+			background-color: #eee;
+			height: 98px;
+			width: 1178px;
+			overflow: hidden;
+			position: relative;
+			ul, ol {
+				list-style: none;
+				margin:0;
+				padding:0;
+				img {
+					width: 100%;
+				}
+			}
+			ol {
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+				li {
+					float: left;
+					text-align: center;
+					background-color: rgba(255,255,255,.5);
+					color : #999;
+					width: 23px;
+					height: 23px;
+					line-height: 23px;
+					font-weight: bolder;
+					margin: 5px;
+					cursor : pointer;
+					&:hover {
+						background-color: red;
+						color:white;
+					}
+				}
+			}
+		}
+		.taps-selects {
+			height: 42px;
+  			// background-color: white;
+  			.taps-selects-item {
+  				float:left;
+  				height:40px;
+  				line-height: 40px;
+  				padding: 0 10px;
+  				font-size: 20px;
+				cursor : pointer;
+				color : #666;
+  				&.active {
+  					color : #0089dc;
+  					border-bottom: 2px solid #0089dc;
+  					margin-bottom: -2px;
+  				}
+
+  			}
+  			.who-to-play {
+  				float : right;
+  				width:153px;
+				height:40px;
+				img {
+					width:100%;
+				}
+  			}
+		}
+		.taps-contents {
+			background-color: white;
+
+			.taps-contents-item {
+				.filter-item {
+
+					position : relative;
+					margin: 5px 5px 5px 7em;
+					// background-color: blue;
+					.filter-name {
+						position : absolute;
+						left:-6em;
+						color : #999;
+					}
+					.filter-item-t {
+						cursor:  pointer;
+						color : #666;
+						font-size: 14px;
+						margin : 3px;
+						padding : 0 5px;
+						&:hover {
+							background-color: #999;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+

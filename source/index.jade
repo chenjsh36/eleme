@@ -86,34 +86,32 @@ body
 					//- 游戏大厅
 					div.taps-contents-item
 						div.filter-item
-							span.filter-name.filter-item-t 游戏分类:
+							span.filter-name 游戏分类:
 							span.filter-item-t 不限
 							span.filter-item-t 体育
 							span.filter-item-t 角色
 							span.filter-item-t 即时
 							span.filter-item-t 赛车
 						div.filter-item
-							span.filter-name.filter-item-t 优惠活动:
+							span.filter-name 优惠活动:
 							span.filter-item-t 不限
 							span.filter-item-t 全部优惠活动
 							span.filter-item-t 抵价券
 							span.filter-item-t 满减优惠
 							span.filter-item-t 新用户立减（不与其他活动共享）
-						div.filter-item
+						div.filter-item-nopadding
 							div.sorts
-								a.sort-item 默认排序
+								a.sort-item.active 默认排序
 								a.sort-item 下载量
 								a.sort-item 评价
 								div.othersorts
 									a(href="#") 下载速度
-									a.down-point
 									div.othersorts-list
 										a(href="#") 下载速度
 										a(href="#") 价格
 										a(href="#") 支持语言
 								div.othersorts
 									a(href="#") 价格：不限
-									a.down-point
 									div.othersorts-list
 										a(href="#") 10元以下
 										a(href="#") 20元以下
@@ -131,178 +129,197 @@ body
 								label.options-item
 									input(type="checkbox") 
 									在线支付
-						div.best-game-contents
-							a(href="#")
-								查看全部
-								strong 18
-								款精品游戏
-							div.title
-								玩些好玩的游戏，看看大家都在玩什么
-							div.place-content
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份								
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份
-						div.all-game-contents
-							div.all-game-pack
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份												
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份				
-								a.box-container
-									div.box-container-logo
-										img(src="logo1.png")
-										span 免费
-									div.box-container-content
-										div.box-container-content-title
-											九阿哥
-										div.box-container-content-stars
-											span.icon-star
-										span.box-container-content-monthsales
-											月下载量1000份												
+					div.best-game-contents
+						a(href="#")
+							查看全部
+							strong 18
+							款精品游戏
+						div.title
+							玩些好玩的游戏，看看大家都在玩什么
+						div.place-content
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份								
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份
+					div.all-game-contents
+						div.all-game-pack
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份												
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份				
+							a.box-container
+								div.box-container-logo
+									img(src="assets/logo1.jpeg")
+									span 免费
+								div.box-container-content
+									div.box-container-content-title
+										九阿哥
+									div.box-container-content-stars
+										span.icon-star
+									span.box-container-content-monthsales
+										月下载量1000份												
 
-					div.taps-contents-item	这里空空如也
+					//- div.taps-contents-item	这里空空如也
 					//- 大家都在玩的游戏
 					//- div.taps-contents-item	
 			//- 底边栏
-			div#footer
-				div.footer-container
-					div.footer-link
-						h3.footer-link-title 用户帮组
-						a.footer-link-item(href="#")服务中心
-						a.footer-link-item(href="#")常见问题
-						a.footer-link-item(href="#")在线客服
-						a.footer-link-item(href="#")意见反馈
-					div.footer-link
-						h3.footer-link-title 用户帮组
-						a.footer-link-item(href="#")服务中心
-						a.footer-link-item(href="#")常见问题
-						a.footer-link-item(href="#")在线客服
-					div.footer-link
-						h3.footer-link-title 用户帮组
-						a.footer-link-item(href="#")服务中心
-						a.footer-link-item(href="#")常见问题
-						a.footer-link-item(href="#")在线客服
-						a.footer-link-item(href="#")意见反馈
-					div.footer-mobile
-						a(href="#")
-							img(src="assets/eleme.png")
-						div.footer-mobile-content
-							h3 下载手机版
-							p 扫一扫，手机下载游戏
+		div#footer
+			div.footer-container
+				div.footer-link
+					h3.footer-link-title 用户帮组
+					a.footer-link-item(href="#")服务中心
+					a.footer-link-item(href="#")常见问题
+					a.footer-link-item(href="#")在线客服
+					a.footer-link-item(href="#")意见反馈
+				div.footer-link
+					h3.footer-link-title 用户帮组
+					a.footer-link-item(href="#")服务中心
+					a.footer-link-item(href="#")常见问题
+					a.footer-link-item(href="#")在线客服
+				div.footer-link
+					h3.footer-link-title 用户帮组
+					a.footer-link-item(href="#")服务中心
+					a.footer-link-item(href="#")常见问题
+					a.footer-link-item(href="#")在线客服
+					a.footer-link-item(href="#")意见反馈
+				
+				div.footer-mobile
+					div.footer-content-item  24小时客服热线 : 
+						a(href="#") 662074
+					div.footer-content-item
+						意见反馈：
+						a(href="#") chenjsh36@outlook.com
+					div.footer-content-item
+						span 关注我们：
+						div.chat-out-div.icon-gift
+							div.chat-div
+								img(src="assets/eleme.png")
+								span 微信号：game city
+								br
+								span welcome
+
+						a.icon-gift(href="#" alt="新浪") 
+						a.icon-gift(href="#" alt="人人") 
+
+				div.footer-contact
+					a(href="#")
+						img(src="assets/eleme.png")
+					div.footer-mobile-content
+						h3 下载手机版
+						p 扫一扫，手机下载游戏
 
 	script(src="index.js")
 	

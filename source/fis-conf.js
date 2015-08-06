@@ -74,7 +74,7 @@ fis.config.merge({
 				release : '$1'
 			},
 			{
-				reg : /^\/static\/images\/(.*\.(?:png|gif|jpg|json|mp3))/i,
+				reg : /^\/static\/images\/(.*\.(?:png|gif|jpg|json|mp3|jpeg))/i,
 				release : '/assets/$1'
 			},
 			{

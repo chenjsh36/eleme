@@ -49,9 +49,6 @@ body {
 }
 
 
-#footer {
-	display : none;
-}
 
 #topbar {
 	height: @tbi_h;
@@ -139,6 +136,7 @@ body {
 @side_content_w: 295px;
 
 #sidebar {
+	z-index : 7;
 	position : fixed;
 	top : 0;
 	bottom : 0;
@@ -375,31 +373,253 @@ body {
   			}
 		}
 		.taps-contents {
-			background-color: white;
+
 
 			.taps-contents-item {
+				background-color: white;
 				.filter-item {
-
 					position : relative;
-					margin: 5px 5px 5px 7em;
+					padding: 10px 10px 10px 7em;
+					border: 1px solid #e6e6e6;
 					// background-color: blue;
 					.filter-name {
 						position : absolute;
-						left:-6em;
+						display: inline-block;
+						left: 0;
 						color : #999;
+						margin : 5px;
+						padding : 3px 5px;
 					}
 					.filter-item-t {
+						display: inline-block;
 						cursor:  pointer;
 						color : #666;
-						font-size: 14px;
-						margin : 3px;
-						padding : 0 5px;
+						margin : 5px 8px;
+						padding : 3px 5px;
 						&:hover {
-							background-color: #999;
+							background-color: #f6f6f6;
 						}
 					}
 				}
+				.filter-item-nopadding {
+					height: 40px;
+					background-color: #f5f5f5;
+					border: 1px solid #e6e6e6;
+					padding-right : 5px;
+					.sorts {
+						.sort-item {
+							text-decoration: none;
+							color : #999;
+							float: left;
+							margin : 5px;
+							padding : 3px 5px;
+							&.active {
+								color : blue;
+							}
+
+						}
+						.othersorts {
+							float: left;
+							margin: 5px;
+  							padding: 3px 5px;
+							> a {
+								text-decoration: none;
+								// margin: 5px;
+								// padding:3px 5px;
+								&:hover + .othersorts-list{
+									background-color: white;
+									display: block;
+								} 
+							}
+							
+							.othersorts-list  {
+								position : absolute;
+								padding : 3px 5px 3px 0;
+								display: none;
+								a {
+									display: block;
+									text-decoration: none;
+									// display: none;
+									&:hover {
+									color : blue;
+									}
+								}
+							}
+						}
+					}
+					.options {
+						float: right;
+						line-height: 40px;
+					}
+				}
 			}
+			.best-game-contents {
+				clear : both;
+				height: 180px;
+				margin: 20px 0;
+				> a {
+					float : right;
+				}
+			}
+
+			.box-container {
+				display: block;
+				margin : 0;
+				padding: 0;
+				border: none;
+
+				width: 25%;
+				float:left;
+
+				background-color: white;
+				cursor: pointer;
+				box-sizing: border-box;
+
+				&:hover {
+					background-color: #f5f5f5;
+				}
+				.box-container-logo {
+					float: left;
+					margin: 5px;
+					padding:20px;
+						text-align: center;
+					img {
+						width: 70px;
+						height: 70px;
+						display: block;
+						margin-bottom: 10px;
+						margin-right: 10px;
+					}
+					span {
+						color : #ccc;
+						font-size:14px;
+					}
+				}
+				.box-container-content{
+					padding:20px;
+					.box-container-content-title {
+						font-size: 16px;
+						color:black;
+						font-weight: bolder;
+					}
+					.box-container-content-monthsales {
+						font-size: 14px;
+						color : #bbb;
+
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+/* footer  */
+#footer {
+	margin: 20px 0 0 0;
+}
+.footer-container {
+	width: @tbc_w;
+	margin: 0 auto;
+	padding-right:@sb_w;
+	.footer-link {
+		float: left;
+		width: 13%;
+		margin:20px 0;
+		.footer-link-title {
+			margin: 0;
+			padding: 0;
+		}
+		.footer-link-item {
+			display: block;
+			text-decoration: none;
+			color : #999;
+		}
+	}
+	.footer-mobile {
+		float: left;
+		width: 23%;
+		padding: 0 20px 0 6%;
+		border-left: 1px solid #ccc;
+		margin: 20px 0;
+		// text-align: center;
+		.chat-out-div {
+			position: relative;
+			display: inline-block;
+			cursor : pointer;
+			margin:0 5px;
+			&:before {
+				content: "\e60c";				
+			}
+			&:hover .chat-div{
+				display: block;	
+				cursor:pointer;
+			}
+		}
+		.chat-div {
+			display: none;
+			position: absolute;
+			border-radius: 5px;
+			background-color: rgba(100,100,100,1);
+			width: 120px;
+			height: 120px;
+			padding: 10px 5px 0 5px;
+			text-align: center;
+			top: -147px;
+			left: -57px;
+			&:before {
+				content: '';
+				/* background-color: black; */
+				/* width: 5px; */
+				/* height: 5px; */
+				border: 5px solid;
+				position: absolute;
+				display: block;
+				bottom: -10px;
+				left: 45%;
+				border-color: gray transparent transparent;
+			}
+			img{
+				margin: 0 auto;
+				width: 80px;
+				height: 80px;
+				display: block;
+
+			}
+			span {
+				font-size: 10px;
+			}
+		}
+		.footer-content-item {
+			a.icon-gift {
+				color : black;
+				text-decoration: none;
+				padding: 0;
+				margin: 0;
+				&:before {
+						content: "\e60c";				
+				}
+			}			
+		}
+		
+
+	}
+	.footer-contact {
+		float: left;
+		width: 23%;
+		// padding: 0 20px 0 6%;
+		margin: 20px 0;
+		a {
+			float: left;
+			img {
+				width: 80px;
+				height: 80px;
+				margin-right: 20px;
+			}
+
+		}
+		h3 {
+			margin-top: 0;
 		}
 	}
 

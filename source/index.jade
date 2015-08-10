@@ -36,7 +36,7 @@ body
 				div#side-part-middle
 					a.icon-file-text(href="#" alt="我的游戏单")
 					div.divide
-					a.icon-gift(href="#" alt="精品游戏") 
+					a.icon-gift#show-side-bar(href="JavaScript:" alt="精品游戏") 
 						精品游戏
 					div.divide
 					a.icon-heart(href="#" alt="我的邮箱") 
@@ -59,30 +59,30 @@ body
 					strong 上海交通大学(北港区19号路口)
 					a(href="#") [切换地址]
 				div.pic-show
-					ul
-						li 
+					ul.pic-show-ul
+						li
 							img(src="assets/show1.gif")
-						li 
+						li
 							img(src="assets/show2.gif")
 						li 
 							img(src="assets/show3.gif")
 						li 
 							img(src="assets/show4.gif")
-					ol
-						li 1
+					ol.pic-show-ol
+						li.active 1
 						li 2
 						li 3
 						li 4
 				div.taps-selects
-					div.taps-selects-item.active
+					div.taps-selects-item.active(title="1")
 						游戏大厅
-					div.taps-selects-item
+					div.taps-selects-item(title="2")
 						下载过的游戏
-					div.taps-selects-item
+					div.taps-selects-item(title="3")
 						大家都在玩的游戏
-					div.taps-item.who-to-play
+					div.taps-item.who-to-play(title="4")
 						img(src="assets/who-to-play.png")
-				div.taps-contents
+				div.taps-contents.active
 					//- 游戏大厅
 					div.taps-contents-item#game-place
 						div.filter-item
@@ -181,6 +181,9 @@ body
 										span.icon-star
 									span.box-container-content-monthsales
 										月下载量1000份
+							div.propover
+								div.rect-point
+								div.propover-content
 					div.all-game-contents
 						div.all-game-pack
 							a.box-container
@@ -272,7 +275,6 @@ body
 									span.box-container-content-monthsales
 										月下载量1000份												
 				div.taps-contents#used-buy
-
 					//- div.taps-contents-item	这里空空如也
 					//- 大家都在玩的游戏
 					//- div.taps-contents-item	

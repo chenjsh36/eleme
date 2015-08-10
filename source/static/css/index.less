@@ -142,9 +142,14 @@ body {
 	bottom : 0;
 	right: -295px;
 	width: @sidebar_w;
-
+	transition: all 1s;
 	background-color : @sidebar_col;
-	
+	&.active {
+		-webkit-transform: translate(-@side_content_w,0px);
+		-ms-transform: translate(-@side_content_w,0px);
+		-o-transform: translate(-@side_content_w,0px);
+		transform: translate(-@side_content_w,0px);
+	}
 	#side-part {
 		width: @side_part_w;
 		height:100%;
@@ -309,12 +314,20 @@ body {
 				text-decoration: none;
 			}
 		}
+		@pic-show-li-h : 100px;
 		.pic-show {
 			background-color: #eee;
-			height: 98px;
+			height: @pic-show-li-h;
 			width: 1178px;
 			overflow: hidden;
 			position: relative;
+			ul {
+				transition: all .5s;
+				li {
+					width: 100%;
+					height : @pic-show-li-h
+				}
+			}
 			ul, ol {
 				list-style: none;
 				margin:0;
@@ -339,6 +352,10 @@ body {
 					margin: 5px;
 					cursor : pointer;
 					&:hover {
+						background-color: red;
+						color:white;
+					}
+					&.active {
 						background-color: red;
 						color:white;
 					}
@@ -373,8 +390,10 @@ body {
   			}
 		}
 		.taps-contents {
-	
-
+			display: none;
+			&.active {
+				display: block;
+			}
 			.taps-contents-item {
 				background-color: white;
 				.filter-item {
@@ -460,6 +479,43 @@ body {
 				> a {
 					float : right;
 				}
+				.place-content {
+					position: relative;
+					.propover {
+						display: none;
+						position:absolute;
+						width: 200px;
+						height: 300px;
+						background-color: white;
+						border:2px solid #666;
+						top:0;
+						// left: 295px;
+						&.left  .rect-point {
+							border-left: 2px solid #666;
+							border-bottom: 2px solid #666;
+							position: absolute;
+							top: 7px;
+							left: -7px;
+							width: 10px;
+							height: 10px;
+							background-color: white;
+							height: 10px;
+							transform: rotate(45deg);
+						}
+						&.right  .rect-point {
+							border-right: 2px solid #666;
+							border-top: 2px solid #666;
+							position: absolute;
+							top: 7px;
+							right: -7px;
+							width: 10px;
+							height: 10px;
+							background-color: white;
+							height: 10px;
+							transform: rotate(45deg);
+						}
+					}
+				}
 			}
 
 			.box-container {
@@ -509,11 +565,11 @@ body {
 					}
 				}
 			}
-			#used-buy {
+			&#used-buy {
 				width:100%;
 				height: 300px;
 				background-color: white;
-				display: none;
+				// display: none;
 			}
 		}
 	}
@@ -565,12 +621,13 @@ body {
 			display: none;
 			position: absolute;
 			border-radius: 5px;
-			background-color: rgba(100,100,100,1);
+			// background-color: rgba(100,100,100,1);
+			background-color: white;
 			width: 120px;
 			height: 120px;
 			padding: 10px 5px 0 5px;
 			text-align: center;
-			top: -147px;
+			top: -135px;
 			left: -57px;
 			&:before {
 				content: '';
@@ -582,7 +639,7 @@ body {
 				display: block;
 				bottom: -10px;
 				left: 45%;
-				border-color: gray transparent transparent;
+				border-color: white transparent transparent;
 			}
 			img{
 				margin: 0 auto;
@@ -596,6 +653,9 @@ body {
 			}
 		}
 		.footer-content-item {
+			margin-bottom: 14px;
+			font-size: 14px;
+			color: #666;
 			a.icon-gift {
 				color : black;
 				text-decoration: none;
